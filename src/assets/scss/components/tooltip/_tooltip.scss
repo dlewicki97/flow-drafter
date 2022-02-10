@@ -1,0 +1,58 @@
+@mixin tooltip {
+  .tooltip:not(.popover)[x-placement^='right'] {
+    margin-left: 24px;
+  }
+  .tooltip:not(.popover)[x-placement^='bottom'] {
+    margin-top: calc((8px * 1.73) / 2);
+    &::after {
+      top: 0% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) rotate(45deg) !important;
+    }
+  }
+  .tooltip:not(.popover)[x-placement^='top'] {
+    margin-bottom: calc((8px * 1.73));
+    &::after {
+      top: unset !important;
+      bottom: 0% !important;
+      left: 50% !important;
+      transform: translate(-50%, 50%) rotate(45deg) !important;
+    }
+  }
+  $tooltipColor: #31353e;
+
+  .tooltip:not(.popover) {
+    background-color: $tooltipColor;
+    color: white;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    z-index: 100000000000000000;
+
+    &::after {
+      content: '.';
+      background-color: $tooltipColor;
+      color: $tooltipColor;
+      $aside: 8px;
+      width: $aside;
+      height: $aside;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: -1;
+    }
+  }
+
+  .tooltip:not(.popover)[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+
+  .tooltip:not(.popover)[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+}

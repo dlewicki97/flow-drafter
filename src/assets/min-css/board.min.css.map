@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,AAAC,CACH,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,IAAI,CACjB,AACD,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,iBAAiB,CAC9B,AACD,AAAA,MAAM,AAAC,CACL,UAAU,CAAE,IAAI,CAChB,MAAM,CAAE,KAAK,CACb,QAAQ,CAAE,QAAQ,CAClB,OAAO,CAAE,MAAM,CAKhB,AAJE,AAAD,cAAS,AAAC,CACR,QAAQ,CAAE,MAAM,CAChB,IAAI,CAAE,CAAC,CACR",
+    "sources": [
+        "../scss/pages/board/board.scss"
+    ],
+    "names": [],
+    "file": "board.min.css"
+}

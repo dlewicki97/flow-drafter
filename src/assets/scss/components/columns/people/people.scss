@@ -1,0 +1,57 @@
+.people {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover &-add-icon {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  .people-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-person,
+  &-count {
+    border-radius: 100%;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    $dim: 28px;
+    width: $dim;
+    height: $dim;
+    margin: 0 -4px;
+    color: white;
+  }
+  &-person {
+    border: 1px solid white;
+    font-weight: 700;
+  }
+  &-count {
+    background-color: #333;
+  }
+  &-add-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    svg {
+      fill: #0073ea;
+      height: 17px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+  @import 'people_dropdown';
+}

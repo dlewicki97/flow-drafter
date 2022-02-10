@@ -1,0 +1,82 @@
+&-edit-mode {
+  &-new-label {
+    border: dashed 1px #c4c4c4;
+    color: #c4c4c4;
+    padding: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-right: 16.8px;
+    margin-left: 24px;
+  }
+  &-listing {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-content: flex-start;
+    &-container {
+      width: 100%;
+    }
+  }
+  &-item {
+    width: 33.33%;
+    padding: 0.3rem;
+
+    $colorWidth: 10%;
+    &:hover &-drag-icon svg {
+      opacity: 1;
+    }
+    &-drag-icon svg {
+      transition: opacity 0.2s;
+      opacity: 0;
+      cursor: move;
+    }
+    &-wrapper {
+      display: flex;
+    }
+    &-delete-icon {
+      &-container {
+        padding-left: 0.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover svg {
+          opacity: 1;
+        }
+      }
+      svg {
+        width: 12px;
+        height: 12px;
+        fill: #676879;
+        cursor: pointer;
+        transition: opacity 0.2s;
+        opacity: 0;
+      }
+    }
+    &-color {
+      width: $colorWidth;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover &-water svg {
+        opacity: 1;
+      }
+      &-water svg {
+        width: 100%;
+        fill: white;
+        opacity: 0;
+        transition: opacity 0.2s;
+        cursor: pointer;
+      }
+    }
+    &-text {
+      width: 100% - $colorWidth;
+      padding: 0.3rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #f5f6f8;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@mixin popover {
+  .popover {
+    box-shadow: 0 4px 17px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 7px;
+    .popover-inner {
+      padding: 0.5rem;
+    }
+  }
+}

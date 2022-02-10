@@ -1,0 +1,17 @@
+main {
+  padding: 0 !important;
+  overflow-y: auto;
+}
+body {
+  overflow-y: hidden !important;
+}
+.board {
+  overflow-x: auto;
+  height: 100vh;
+  position: relative;
+  padding: 1.5rem;
+  &-content {
+    position: sticky;
+    left: 0;
+  }
+}
